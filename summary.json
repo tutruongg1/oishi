@@ -1,0 +1,185 @@
+{
+ "generated": "2026-11-20T18:17",
+ "excel_saved": "2026-11-18T21:46",
+ "carat": 80002,
+ "ticket_uma": 7,
+ "ticket_sup": 62,
+ "uma_owned": 51,
+ "uma_global": 115,
+ "uma_5star": 1,
+ "sup_total": 75,
+ "sup_mlb": 36,
+ "ssr_total": 69,
+ "ssr_mlb": 30,
+ "neg_day": "2029-01-03",
+ "low6": {
+  "day": "2027-01-27",
+  "bal": 6651
+ },
+ "ranks": {
+  "CM": "Second",
+  "LoH": "Platinum 4",
+  "Club": "A",
+  "TT": "Class 6"
+ },
+ "next_pull": {
+  "start": "2026-12-02",
+  "end": "2026-12-26",
+  "type": "Support",
+  "cards": "Mejiro Ramonu",
+  "pull": true,
+  "pulls": 400,
+  "ids": [
+   30134
+  ],
+  "est": false
+ },
+ "banners": [
+  {
+   "start": "2026-11-10",
+   "end": "2026-11-24",
+   "type": "Uma",
+   "cards": "Mejiro Ryan (Valentine) + Ines Fujin (Valentine)",
+   "pull": false,
+   "pulls": 0,
+   "ids": [
+    102702,
+    103102
+   ],
+   "est": false
+  },
+  {
+   "start": "2026-11-10",
+   "end": "2026-11-24",
+   "type": "Support",
+   "cards": "Marvelous Sunday + Biko Pegasus",
+   "pull": false,
+   "pulls": 0,
+   "ids": [
+    30131,
+    30132
+   ],
+   "est": false
+  },
+  {
+   "start": "2026-11-22",
+   "end": "2026-12-03",
+   "type": "Uma",
+   "cards": "Shinko Windy",
+   "pull": false,
+   "pulls": 0,
+   "ids": [
+    104301
+   ],
+   "est": false
+  },
+  {
+   "start": "2026-11-22",
+   "end": "2026-12-03",
+   "type": "Support",
+   "cards": "Maruzensky + Nishino Flower",
+   "pull": false,
+   "pulls": 0,
+   "ids": [
+    30107,
+    30082
+   ],
+   "est": false
+  },
+  {
+   "start": "2026-12-02",
+   "end": "2026-12-26",
+   "type": "Uma",
+   "cards": "Mr. C.B. + Twin Turbo",
+   "pull": false,
+   "pulls": 0,
+   "ids": [
+    105701,
+    106601
+   ],
+   "est": false
+  },
+  {
+   "start": "2026-12-02",
+   "end": "2026-12-26",
+   "type": "Support",
+   "cards": "Mejiro Ramonu",
+   "pull": true,
+   "pulls": 400,
+   "ids": [
+    30134
+   ],
+   "est": false
+  },
+  {
+   "start": "2026-12-16",
+   "end": "2026-12-26",
+   "type": "Uma",
+   "cards": "Daiichi Ruby",
+   "pull": false,
+   "pulls": 0,
+   "ids": [
+    108501
+   ],
+   "est": false
+  },
+  {
+   "start": "2026-12-16",
+   "end": "2026-12-26",
+   "type": "Support",
+   "cards": "Sirius Symboli + Oguri Cap",
+   "pull": false,
+   "pulls": 0,
+   "ids": [
+    30091,
+    30146
+   ],
+   "est": false
+  }
+ ],
+ "goals": [
+  {
+   "name": "Progenitors & Guides – Pal #30137",
+   "type": "Support",
+   "id": 30137,
+   "pull": "2026-12-30",
+   "left": 56354,
+   "status": "Đủ"
+  },
+  {
+   "name": "Mihono Bourbon – Wit #30141",
+   "type": "Support",
+   "id": 30141,
+   "pull": "2027-01-27",
+   "left": 6651,
+   "status": "Đủ"
+  }
+ ],
+ "pvp": [
+  {
+   "kind": "CM",
+   "no": 22,
+   "name": "Aquarius Cup",
+   "track": "Tokyo · Dirt · 1600m",
+   "start": "2026-11-22",
+   "end": "2026-11-28"
+  },
+  {
+   "kind": "CM",
+   "no": 23,
+   "name": "Pisces Cup",
+   "track": "Nakayama · Turf · 2000m",
+   "start": "2026-12-16",
+   "end": "2026-12-22"
+  },
+  {
+   "kind": "LoH",
+   "no": 1,
+   "name": "League of Heroes",
+   "track": "Tokyo · Turf · 2400m",
+   "start": "2027-01-26",
+   "end": "2027-02-04"
+  }
+ ],
+ "new_items": []
+}

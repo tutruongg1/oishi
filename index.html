@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b5e4a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="robots" content="noindex, nofollow">
+<title>Oishi</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230b8a6c'/%3E%3Cpath d='M7 6h10l3 4-8 9-8-9z' fill='%23b9fff0'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+:root{--bg:#0d1210;--panel:#151d1a;--panel2:#1b2521;--line:#26332e;--fg:#e8f0ec;--mut:#8a9a94;--ac:#22c49b;--ok:#3ccf8e;--warn:#f2b54b;--bad:#f0606f;--uma:#5aa2f5;--sup:#b08cf5;--gold:#f6c453;--font:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+@media (prefers-color-scheme:light){:root{--bg:#f2f5f4;--panel:#fff;--panel2:#f5f8f7;--line:#e1e8e5;--fg:#13201b;--mut:#5f706a;--ac:#0b8a6c}}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 var(--font);-webkit-font-smoothing:antialiased}
+.wrap{max-width:520px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.top b{font-size:18px}.top .up{margin-left:auto;font-size:12px;color:var(--mut);text-align:right;line-height:1.3}
+.stale{color:var(--warn)!important}
+.digi{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}
+.ol{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:12.5px;opacity:.9}.ol .neg{color:#ffd28a;font-weight:600}
+.av img.st{object-fit:cover;object-position:50% 12%;transform:scale(1.6);transform-origin:50% 0}
+.hero{position:relative;overflow:hidden;border-radius:22px;padding:20px;background:linear-gradient(135deg,#0b6e57,#0a3d31 65%,#082a22);color:#fff}
+.hero svg.tr{position:absolute;inset:0;width:100%;height:100%;opacity:.16}
+.hero>*:not(.tr){position:relative}
+.lab{font-size:11px;letter-spacing:.09em;text-transform:uppercase;opacity:.75}
+.big{display:flex;align-items:center;gap:10px;font-size:46px;font-weight:800;letter-spacing:-1.4px;line-height:1.05;font-variant-numeric:tabular-nums;margin-top:4px}
+.ic{display:inline-flex;flex:none}.ic>*{width:100%;height:100%;object-fit:contain}
+.tix{display:flex;gap:18px;margin-top:10px;font-size:14px}.tix span{display:inline-flex;align-items:center;gap:6px}
+.sec{margin-top:18px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;margin:0 2px 8px}
+.sh h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:0;font-weight:700}
+.sh span{font-size:12px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:4px 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px}
+.stat .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}.stat .v small{font-size:13px;color:var(--mut);font-weight:600}
+.stat .k{font-size:12px;color:var(--mut);margin-top:2px}
+.pbar{height:5px;border-radius:9px;background:var(--line);margin-top:8px;overflow:hidden}.pbar i{display:block;height:100%;background:var(--ac);border-radius:9px}
+.row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}
+.row .t{min-width:0;flex:1}.row .t1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.row .t2{font-size:12px;color:var(--mut)}
+.row .r{text-align:right;flex:none;font-size:12px;color:var(--mut)}.row .r b{display:block;font-size:16px;color:var(--fg);font-variant-numeric:tabular-nums}
+.av{position:relative;overflow:hidden;flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+.av.sup{border-radius:11px}.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.next{display:flex;align-items:center;gap:14px;padding:14px;border-radius:16px;border:1px solid rgba(34,196,155,.4);background:linear-gradient(90deg,rgba(34,196,155,.16),transparent)}
+.next .cd{margin-left:auto;text-align:right}.next .cd b{font-size:28px;font-variant-numeric:tabular-nums;line-height:1}
+.next .cd span{display:block;font-size:12px;color:var(--mut)}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mut);font-weight:600}
+.tag.ok{color:var(--ok);border-color:rgba(60,207,142,.5)}.tag.bad{color:var(--bad);border-color:rgba(240,96,111,.5)}.tag.warn{color:var(--warn);border-color:rgba(242,181,75,.5)}.tag.pull{background:var(--ac);border-color:var(--ac);color:#fff}
+.ranks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.rk{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center}
+.rk .k{font-size:11px;color:var(--mut)}.rk .v{font-weight:700;font-size:14px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding:10px 2px 2px;scrollbar-width:none}
+.foot{margin-top:22px;text-align:center;font-size:12px;color:var(--mut);line-height:1.6}
+.err{margin-top:40vh;text-align:center;color:var(--mut)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9fff0"/><stop offset=".5" stop-color="#4fe0bf"/><stop offset="1" stop-color="#1a9e7f"/></linearGradient>
+<symbol id="gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z" fill="url(#gg)"/><path d="M2 9h20M8 3l4 18 4-18M6 3l2 6 4-6 4 6 2-6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".9"/></symbol>
+<symbol id="tk" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2.5a2.5 2.5 0 0 0 0 5V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2.5a2.5 2.5 0 0 0 0-5z" fill="currentColor"/></symbol>
+</defs></svg>
+<div class="wrap">
+  <div class="err" id="err">Đang tải…</div>
+  <main id="app" hidden>
+    <div class="top"><img class="digi" src="https://media.gametora.com/umamusume/characters/chibi/101901_0010.png" alt="" onerror="this.remove()"><b>Oishi</b><div class="up" id="up"></div></div>
+
+    <section class="hero">
+      <svg class="tr" viewBox="0 0 400 200" preserveAspectRatio="none"><g fill="none" stroke="#fff" stroke-width="2"><path d="M-10 190C90 40 280 40 410 150"/><path d="M-10 210C100 70 280 70 410 175" stroke-dasharray="8 10"/></g></svg>
+      <div class="lab">Carat</div>
+      <div class="big"><span class="ic" data-ic="carat" style="width:40px;height:40px"><svg><use href="#gem"/></svg></span><span id="carat"></span></div>
+      <div class="ol" id="outlook"></div>
+      <div class="tix">
+        <span><span class="ic" data-ic="tu" style="width:20px;height:20px;color:#9cc8ff"><svg><use href="#tk"/></svg></span><b id="tu"></b>&nbsp;Uma</span>
+        <span><span class="ic" data-ic="ts" style="width:20px;height:20px;color:#d2bcff"><svg><use href="#tk"/></svg></span><b id="ts"></b>&nbsp;Support</span>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sh"><h2>Bộ sưu tập</h2></div>
+      <div class="stats" id="stats"></div>
+      <div class="thumbs" id="newItems"></div>
+    </section>
+
+    <section class="sec" id="secNext">
+      <div class="sh"><h2>Pull kế tiếp</h2></div>
+      <div id="next"></div>
+    </section>
+
+    <section class="sec">
+      <div class="sh"><h2>Banner sắp tới</h2></div>
+      <div class="card" id="banners"></div>
+    </section>
+
+    <section class="sec">
+      <div class="sh"><h2>Mục tiêu</h2></div>
+      <div class="card" id="goals"></div>
+    </section>
+
+    <section class="sec">
+      <div class="sh"><h2>CM &amp; LoH</h2></div>
+      <div class="ranks" id="ranks"></div>
+      <div class="card" id="pvp"></div>
+    </section>
+
+    <div class="foot" id="foot"></div>
+  </main>
+</div>
+<script>
+"use strict";
+const $ = (s) => document.querySelector(s);
+const mk = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+const fmt = (n) => (n == null ? "—" : Math.round(n).toLocaleString("en-US"));
+const D = (s) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+const T0 = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+const days = (s) => Math.round((D(s) - T0) / 864e5);
+const dm = (s) => { const d = D(s); return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`; };
+const when = (iso) => { const d = new Date(iso); return isNaN(d) ? iso : d.toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" }); };
+const GT = "https://gametora.com/images/umamusume/";
+const hue = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+function av(name, type, id) {
+  const first = String(name).split("+")[0].replace(/\(.*?\)|\[.*?\]|[–-].*$|#\d+/g, "").trim();
+  const ini = first.split(/\s+/).filter((w) => /^[A-Za-zÀ-ỹ]/.test(w)).slice(0, 2).map((w) => w[0].toUpperCase()).join("") || "?";
+  const a = mk("div", "av" + (type === "Support" ? " sup" : ""), ini), h = hue(first);
+  a.style.background = `linear-gradient(135deg,hsl(${h} 70% 58%),hsl(${(h + 40) % 360} 65% 38%))`;
+  if (id) { const im = new Image(); im.alt = ""; im.onerror = () => im.remove(); im.src = id >= 100000 ? `${GT}characters/chara_stand_${String(id).slice(0, 4)}_${id}.png` : `${GT}supports/support_card_s_${id}.png`; if (id >= 100000) im.className = "st"; a.append(im); }
+  return a;
+}
+function row(left, t1, t2, right) {
+  const r = mk("div", "row"); if (left) r.append(left);
+  const t = mk("div", "t"); t.append(mk("div", "t1", t1)); if (t2) t.append(mk("div", "t2", t2)); r.append(t);
+  if (right) r.append(right); return r;
+}
+function icons() {
+  for (const [k, f] of [["carat", "https://umamusu.wiki/w/images/6/6d/Jewel_GameIcon.png"]]) {
+    const im = new Image(); im.onload = () => document.querySelectorAll(`[data-ic="${k}"]`).forEach((e) => { const i = new Image(); i.src = im.src; e.replaceChildren(i); }); im.src = f;
+  }
+}
+function render(S) {
+  $("#err").hidden = true; $("#app").hidden = false;
+  const age = (Date.now() - new Date(S.generated)) / 36e5;
+  const up = $("#up"); up.replaceChildren(mk("div", "", "Cập nhật " + when(S.generated)));
+  if (age > 24 * 14) { up.lastChild.className = "stale"; up.append(mk("div", "stale", "đã hơn 2 tuần, nhớ xuất lại")); }
+  $("#carat").textContent = fmt(S.carat);
+  const ol = $("#outlook"); ol.replaceChildren();
+  if (S.low6) ol.append(mk("span", "", `Thấp nhất 6 tháng: ${fmt(S.low6.bal)} (${dm(S.low6.day)})`));
+  ol.append(mk("span", S.neg_day ? "neg" : "", S.neg_day ? `Âm carat từ ${dm(S.neg_day)}/${S.neg_day.slice(0, 4)}` : "Không âm carat trong sổ")); $("#tu").textContent = fmt(S.ticket_uma); $("#ts").textContent = fmt(S.ticket_sup);
+
+  const st = $("#stats"); st.replaceChildren();
+  for (const [v, tot, k] of [[S.uma_owned, S.uma_global, "Uma đã có"], [S.ssr_mlb, S.ssr_total, "SSR đã MLB"], [S.sup_mlb, S.sup_total, "Support MLB"]]) {
+    const s = mk("div", "stat"), vv = mk("div", "v", fmt(v)); if (tot) vv.append(mk("small", "", " /" + fmt(tot)));
+    s.append(vv, mk("div", "k", k));
+    if (tot) { const b = mk("div", "pbar"), i = mk("i"); i.style.width = Math.min(100, (v / tot) * 100) + "%"; b.append(i); s.append(b); }
+    st.append(s);
+  }
+  const ni = $("#newItems"); ni.replaceChildren();
+  if (S.new_items && S.new_items.length) for (const n of S.new_items.slice(0, 12)) ni.append(av(n.name, n.type, n.id)); else ni.hidden = true;
+
+  const n = S.next_pull, nx = $("#next"); nx.replaceChildren();
+  if (n) {
+    const c = mk("div", "next"); c.append(av(n.cards, n.type, n.ids[0]));
+    const t = mk("div"); t.style.minWidth = "0"; t.append(mk("div", "", n.cards)); t.firstChild.style.fontWeight = "700";
+    t.append(mk("div", "", `${n.type} · ${fmt(n.pulls)} lượt · đến ${dm(n.end)}`)); t.lastChild.style.cssText = "font-size:12px;color:var(--mut)";
+    const d = days(n.start), cd = mk("div", "cd"); cd.append(mk("b", "", String(d > 0 ? d : Math.max(0, days(n.end)))), mk("span", "", d > 0 ? "ngày nữa mở" : "ngày còn lại"));
+    c.append(t, cd); nx.append(c);
+  } else $("#secNext").hidden = true;
+
+  const bl = $("#banners"); bl.replaceChildren();
+  for (const b of S.banners.slice(0, 5)) {
+    const r = mk("div", "r"); r.append(b.pull ? mk("span", "tag pull", "PULL") : mk("span", "", ""));
+    const run = days(b.start) <= 0;
+    r.append(mk("div", "", run ? `còn ${Math.max(0, days(b.end))} ngày` : `${days(b.start)} ngày nữa`));
+    bl.append(row(av(b.cards, b.type, b.ids[0]), b.cards, `${b.type} · ${dm(b.start)} → ${dm(b.end)}${b.est ? " · dự kiến" : ""}`, r));
+  }
+
+  const gl = $("#goals"); gl.replaceChildren();
+  if (!S.goals.length) gl.append(row(null, "Chưa có thẻ mục tiêu", null, null));
+  for (const g of S.goals) {
+    const r = mk("div", "r"); r.append(mk("b", "", fmt(g.left)));
+    const cls = g.status === "Đủ" ? (g.left < 10000 ? "warn" : "ok") : String(g.status).startsWith("Thiếu") ? "bad" : "";
+    r.append(mk("span", "tag " + cls, g.status || "—"));
+    gl.append(row(av(g.name, g.type, g.id), String(g.name).replace(/\s*#\d+$/, ""), g.pull ? `Pull ${dm(g.pull)} · còn ${days(g.pull)} ngày` : "Chưa có banner", r));
+  }
+
+  const rk = $("#ranks"); rk.replaceChildren();
+  for (const [k, v] of Object.entries(S.ranks || {})) { const c = mk("div", "rk"); c.append(mk("div", "k", k), mk("div", "v", v || "—")); rk.append(c); }
+  const pv = $("#pvp"); pv.replaceChildren();
+  for (const p of S.pvp) {
+    const ic = mk("div", "av sup", p.kind); ic.style.background = p.kind === "CM" ? "linear-gradient(135deg,#f6c453,#b9832a)" : "linear-gradient(135deg,#b08cf5,#6a4bb8)"; ic.style.fontSize = "12px";
+    const r = mk("div", "r"); const d = days(p.start); r.append(mk("b", "", d > 0 ? `${d} ngày` : "Đang diễn ra"), mk("div", "", `${dm(p.start)} → ${dm(p.end)}`));
+    pv.append(row(ic, `${p.kind} ${p.no ?? ""} · ${p.name}`, p.track, r));
+  }
+  $("#foot").textContent = (S.excel_saved ? `Excel lưu ${when(S.excel_saved)} · ` : "") + "Ảnh: GameTora, umamusu.wiki · Fan project cá nhân";
+}
+icons();
+fetch("summary.json?t=" + Date.now(), { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(render)
+  .catch(() => { $("#err").textContent = "Chưa có dữ liệu. Máy tính chưa gửi bản tóm tắt nào."; });
+</script>
+</body>
+</html>
